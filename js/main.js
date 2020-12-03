@@ -1,16 +1,16 @@
 const addBook = document.querySelector('.addbook');
 const modal= document.querySelector(".modal-d");
-const btncont=document.querySelector(".btncont");
+const maincont=document.querySelector(".maincont");
 const btnclose=document.querySelector(".close");
 
 addBook.addEventListener("click", function() {
 modal.classList.add("show");
-btncont.classList.add("hide");
+maincont.classList.add("hide");
 })
 
 
 btnclose.addEventListener("click",function(){
   modal.classList.remove("show");
-  btncont.classList.remove("hide");
+  maincont.classList.remove("hide");
 
 })

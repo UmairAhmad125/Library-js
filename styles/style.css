@@ -24,7 +24,11 @@ body {
   justify-content:space-between;
 }
 
-.btncont.hide {
+.maincont{
+  display: block;
+}
+
+.maincont.hide {
   display: none;
 }
 
