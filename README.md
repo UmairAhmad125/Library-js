@@ -36,7 +36,7 @@ $ cd Library-js
 $ Open the index.html file using your favorite browser
 ```
 ## Live vesion
-[click here](https://rawcdn.githack.com/ajkacca457/Library-js/06c7d75ed05904a0e57e6087b096adab79431e64/index.html)
+[click here](https://basiclibrary.netlify.app/)
 
 # Authors
 
