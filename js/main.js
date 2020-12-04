@@ -9,12 +9,13 @@ const numPages = document.getElementById("pages");
 const readStatus = document.getElementById("status");
 const bookcontainer=document.querySelector(".bookcont");
 
-let myBooks = [];
+let myBooks = [ {name:"Harry potter", author:"Jk Rowling",pages:301, status:"Finished"}];
 
-function Book(name, author, pages) {
+function Book(name, author, pages,status) {
     this.name = name;
     this.author = author;
     this.pages = pages;
+    this.status=status
 }
 
 addBook.addEventListener("click", function() {
