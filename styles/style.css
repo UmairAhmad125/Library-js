@@ -1,11 +1,9 @@
-
 body {
-  margin:0;
+  margin: 0;
   padding: 0;
   position: relative;
   background-color: rgba(255, 235, 249, 0.93);
 }
-
 
 .modal-d {
   position: absolute;
@@ -14,17 +12,17 @@ body {
   width: 100vw;
   display: none;
   margin: 0;
-  top:0;
+  top: 0;
   left: 0;
   overflow: hidden;
 }
 
-.btncont{
+.btncont {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
-.maincont{
+.maincont {
   display: block;
 }
 
@@ -32,15 +30,15 @@ body {
   display: none;
 }
 
-.modal-d.show{
+.modal-d.show {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .close {
-  right:5px;
-  top:5px;
+  right: 5px;
+  top: 5px;
 }
 
 .bookcont {
@@ -48,4 +46,9 @@ body {
   margin: auto;
   max-height: 70vh;
   overflow: auto;
+}
+
+span {
+  color: red;
+  display: none;
 }
