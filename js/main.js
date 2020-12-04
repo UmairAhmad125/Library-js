@@ -9,6 +9,7 @@ const numPages = document.getElementById("pages");
 const readStatus = document.getElementById("status");
 const bookcontainer=document.querySelector(".bookcont");
 
+
 let myBooks = [ {name:"Harry potter", author:"Jk Rowling",pages:301, status:"Finished"}];
 
 function Book(name, author, pages,status) {
@@ -22,7 +23,6 @@ addBook.addEventListener("click", function() {
     modal.classList.add("show");
     maincont.classList.add("hide");
 })
-
 
 function addBooktolibrary(){
   const name = bookName.value;
@@ -57,6 +57,14 @@ function clearfield() {
   numPages.value=""
 }
 
+window.addEventListener("DOMContentLoaded",displaybook)
+
+btnclose.addEventListener("click", function() {
+    modal.classList.remove("show");
+    maincont.classList.remove("hide");
+
+})
+
 submit.addEventListener("click", function(e) {
 e.preventDefault();
 addBooktolibrary();
@@ -66,9 +74,22 @@ modal.classList.remove("show");
 maincont.classList.remove("hide");
 })
 
+bookcontainer.addEventListener("click",changestatus)
 
-btnclose.addEventListener("click", function() {
-    modal.classList.remove("show");
-    maincont.classList.remove("hide");
 
-})
+function removeBook(index){
+    myBooks.splice(index, 1);
+    displaybook();
+    }
+
+
+function changestatus(e) {
+  if (e.target.classList.contains("status")) {
+
+      if(e.target.textContent==="Finished"){
+        e.target.textContent="Yet to read"
+      }
+      else
+      { e.target.textContent="Finished" }
+    }
+}
