@@ -51,6 +51,12 @@ bookcontainer.appendChild(card);
 });
 }
 
+function clearfield() {
+  bookName.value="",
+  bookAuthor.value="",
+  numPages.value=""
+}
+
 submit.addEventListener("click", function(e) {
     //e.preventDefault();
     const name = bookName.value;
