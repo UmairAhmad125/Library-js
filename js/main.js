@@ -6,7 +6,8 @@ const submit = document.querySelector(".submit-btn");
 const bookName = document.getElementById("bookName");
 const bookAuthor = document.getElementById("bookAuthor");
 const numPages = document.getElementById("pages");
-const readStatus = document.getElementById("readStatus");
+const readStatus = document.getElementById("status");
+const bookcontainer=document.querySelector(".bookcont");
 
 let myBooks = [];
 
