@@ -96,7 +96,10 @@ submit.addEventListener('click', (e) => {
 
 bookcontainer.addEventListener('click', changestatus);
 
+/* eslint-disable no-unused-vars */
+
 function removeBook(index) {
   myBooks.splice(index, 1);
   displaybook();
 }
+/* eslint-enable no-unused-vars */
