@@ -58,16 +58,13 @@ function clearfield() {
 }
 
 submit.addEventListener("click", function(e) {
-    //e.preventDefault();
-    const name = bookName.value;
-    const author = bookAuthor.value;
-    const pages = numPages.value;
-    const status = readStatus.value;
-    const Book1 = new Book(name, author, pages);
-    myBooks.push(Book1);
-    console.log(myBooks);
+e.preventDefault();
+addBooktolibrary();
+clearfield()
+displaybook();
+modal.classList.remove("show");
+maincont.classList.remove("hide");
 })
-console.log(myBooks);
 
 
 btnclose.addEventListener("click", function() {
