@@ -36,12 +36,19 @@ function addBooktolibrary() {
   myBooks.push(book);
 }
 
+function changestatus(e) {
+  if (e.target.classList.contains('status')) {
+    if (e.target.textContent === 'Finished') {
+      e.target.textContent = 'Yet to read';
+    } else { e.target.textContent = 'Finished'; }
+  }
+}
+
 function displaybook() {
   bookcontainer.innerHTML = '';
 
   myBooks.forEach((item, index) => {
     const card = document.createElement('div');
-    console.log(card);
     card.className = 'col-6';
     card.innerHTML = `<div class="card text-dark bg-white mb-3" >
   <li class="list-group-item d-flex justify-content-between"><p class="bg-dark px-2 py-1 text-white">${index + 1}</p><a href="#" class="delete text-danger" onclick="removeBook(${index})" >X</a></li>
@@ -55,8 +62,8 @@ function displaybook() {
 }
 
 function clearfield() {
-  bookName.value = '',
-  bookAuthor.value = '',
+  bookName.value = '';
+  bookAuthor.value = '';
   numPages.value = '';
 }
 
@@ -92,12 +99,4 @@ bookcontainer.addEventListener('click', changestatus);
 function removeBook(index) {
   myBooks.splice(index, 1);
   displaybook();
-}
-
-function changestatus(e) {
-  if (e.target.classList.contains('status')) {
-    if (e.target.textContent === 'Finished') {
-      e.target.textContent = 'Yet to read';
-    } else { e.target.textContent = 'Finished'; }
-  }
 }
