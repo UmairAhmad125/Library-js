@@ -24,6 +24,15 @@ addBook.addEventListener("click", function() {
 })
 
 
+function addBooktolibrary(){
+  const name = bookName.value;
+  const author = bookAuthor.value;
+  const pages = numPages.value;
+  const status = readStatus.value;
+  const book = new Book(name, author, pages,status);
+  myBooks.push(book);
+}
+
 submit.addEventListener("click", function(e) {
     //e.preventDefault();
     const name = bookName.value;
