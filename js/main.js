@@ -22,6 +22,15 @@ function bookFactory(name, author, pages, status) {
     return { name, author, pages, status };
 }
 
+class Book {
+    constructor(name, author, pages, status) {
+        this.name = name;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+    }
+}
+
 addBook.addEventListener('click', () => {
     modal.classList.add('show');
     maincont.classList.add('hide');
@@ -32,7 +41,7 @@ function addBooktolibrary() {
     const author = bookAuthor.value;
     const pages = numPages.value;
     const status = readStatus.value;
-    const book = bookFactory(name, author, pages, status);
+    const book = new Book(name, author, pages, status);
     myBooks.push(book);
 }
 
